@@ -183,15 +183,16 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei
 
 <!-- 返回入口 -->
 <div class="back-bar">
-  <a href="https://sparrow528.github.io/checkup-landing/">← 返回免费工具入口</a>
+  <a href="https://sparrow528.github.io/checkup-landing/">← 返回共享工具入口</a>
 </div>
 
 <!-- 会员引导 -->
 <div class="footer-banner">
-  <div class="title">🔒 免费版 · 基础自查</div>
+  <div class="title">🔒 共享版 · 基础自查</div>
   <div class="desc">升级会员享深度研发费用合规诊断 + 一对一专家辅导</div>
   <a class="btn" href="https://sparrow528.github.io/tax-membership/" target="_blank">👉 了解会员方案</a>
   <div class="copy">宇守信投资管理咨询（北京）有限公司 · 洪淳宇</div>
+  <div style="font-size:10px;color:#999;margin-top:2px">版本 V3.0</div>
 </div>
 
 <script>
@@ -278,7 +279,7 @@ function shareResult(){
   h+='</div><div style="font-size:13px;font-weight:700;color:#065f46;margin-bottom:8px">📋 检查明细</div>';
   var dg2={};results.forEach(function(r){if(!dg2[r.dim])dg2[r.dim]=[];dg2[r.dim].push(r);});
   DIMS.forEach(function(d){var items=dg2[d.name]||[];if(!items.length)return;var dt=items.reduce(function(s,r){return s+r.score;},0),dm=items.reduce(function(s,r){return s+r.maxScore;},0),dr=dm>0?Math.round(dt/dm*100):0,dc="#16a34a";if(dr<60)dc="#dc2626";else if(dr<80)dc="#d97706";h+='<div class="sc2"><div class="st"><span>'+d.name+'</span><span style="color:'+dc+'">'+dt+'/'+dm+' 分 ('+dr+'%)</span></div>';items.forEach(function(r){var c2=sc[r.status]||["#f0f0f0","#999"];h+='<div class="sr"><span class="in">'+r.name+'</span><span class="is" style="color:'+c2[1]+'">'+r.score+'分</span><span class="it" style="background:'+c2[0]+';color:'+c2[1]+'">'+(sm[r.status]||'')+'</span></div>';});h+='</div>';});
-  h+='<div class="mk"><h3>🔒 免费版 · 基础合规自查</h3><p>升级会员享深度研发费用合规诊断 + 一对一专家咨询</p><a class="btn" href="https://sparrow528.github.io/tax-membership/" target="_blank">👉 了解会员方案</a></div><div style="background:#fff;border-radius:10px;padding:12px;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,.04);margin-bottom:12px"><div style="font-size:12px;font-weight:700;color:#065f46;margin-bottom:2px">👤 洪淳宇 · 您身边的财税专家</div><div style="font-size:10px;color:#666">专注研发费用加计扣除、高新认定、财税合规服务</div><div style="font-size:10px;color:#999;margin-top:4px">📞 186-0129-4989</div></div><div style="font-size:9px;color:#bbb;text-align:center;line-height:1.6">* 本报告由自查工具自动生成，仅供初步参考。<br>* 宇守信投资管理咨询（北京）有限公司 · 洪淳宇</div></div></body></html>';
+  h+='<div class="mk"><h3>🔒 共享版 · 基础合规自查</h3><p>升级会员享深度研发费用合规诊断 + 一对一专家咨询</p><a class="btn" href="https://sparrow528.github.io/tax-membership/" target="_blank">👉 了解会员方案</a></div><div style="background:#fff;border-radius:10px;padding:12px;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,.04);margin-bottom:12px"><div style="font-size:12px;font-weight:700;color:#065f46;margin-bottom:2px">👤 洪淳宇 · 您身边的财税专家</div><div style="font-size:10px;color:#666">专注研发费用加计扣除、高新认定、财税合规服务</div><div style="font-size:10px;color:#999;margin-top:4px">📞 186-0129-4989</div></div><div style="font-size:9px;color:#bbb;text-align:center;line-height:1.6">* 本报告由自查工具自动生成，仅供初步参考。<br>* 宇守信投资管理咨询（北京）有限公司 · 洪淳宇<br>版本 V3.0</div></div></body></html>';
   var win=window.open("","_blank");win.document.write(h);win.document.close();
 }
 
